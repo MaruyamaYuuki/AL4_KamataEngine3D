@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{21B76583-DB5E-4750-B00C-FBCF46ABCE48}|DirectXGame.vcxproj|C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21B76583-DB5E-4750-B00C-FBCF46ABCE48}|DirectXGame.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +31,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-02T05:08:33.929Z",
+              "EditorCaption": ""
             }
           ]
         }
