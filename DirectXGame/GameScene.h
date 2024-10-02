@@ -1,8 +1,13 @@
 #pragma once
 
 #include <KamataEngine.h>
-
-using namespace KamataEngine;
+#include "audio/Audio.h"
+#include "base/DirectXCommon.h"
+#include "input/Input.h"
+#include "3d/Model.h"
+#include "2d/Sprite.h"
+#include "3d/Camera.h"
+#include "3d/WorldTransform.h"
 
 /// <summary>
 ///ゲームシーン
@@ -35,9 +40,9 @@ public:
 	void Draw();
 
 private:
-	DirectXCommon* dxCommon_ = nullptr;
-	Input* input_ = nullptr;
-	Audio* audio_ = nullptr;
+	KamataEngine::DirectXCommon* dxCommon_ = nullptr;
+	KamataEngine::Input* input_ = nullptr;
+	KamataEngine::Audio* audio_ = nullptr;
 
 	/// <summary>
 	/// ゲームシーン用
