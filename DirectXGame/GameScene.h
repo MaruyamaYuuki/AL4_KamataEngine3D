@@ -8,6 +8,8 @@
 #include "2d/Sprite.h"
 #include "3d/Camera.h"
 #include "3d/WorldTransform.h"
+#include "3d/ObjectColor.h"
+#include "Player.h"
 
 /// <summary>
 ///ゲームシーン
@@ -47,6 +49,15 @@ private:
 	/// <summary>
 	/// ゲームシーン用
 	/// </summary>
+	
+	// テクスチャハンドル
+	uint32_t textureHandle_ = 0;
+	// 3Dモデル
+	KamataEngine::Model* model_ = nullptr;
+	// ビュープロジェクション
+	KamataEngine::Camera camera_;
+	// 自キャラ
+	Player* player_ = nullptr;
 };
 
 

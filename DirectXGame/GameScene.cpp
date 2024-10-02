@@ -4,15 +4,32 @@
 
 GameScene::GameScene() {}
 
-GameScene::~GameScene() {}
+GameScene::~GameScene() { 
+	delete model_; 
+	// 自キャラの解放
+	delete player_;
+}
 
 void GameScene::Initialize() { 
 	dxCommon_ = KamataEngine::DirectXCommon::GetInstance(); 
 	input_ = KamataEngine::Input::GetInstance();
 	audio_ = KamataEngine::Audio::GetInstance();
+
+	textureHandle_ = KamataEngine::TextureManager::Load("test.png");
+	// 3Dモデルの生成
+	model_ = KamataEngine::Model::Create();
+	// ビュープロジェクションの初期化
+	camera_.Initialize();
+	//自キャラの生成
+	player_ = new Player();
+	// 自キャラの初期化
+	player_->Initialize(model_, textureHandle_);
 }
 
-void GameScene::Update() {}
+void GameScene::Update() {
+	// 自キャラの更新
+	player_->Update();
+}
 
 void GameScene::Draw() {
 
@@ -40,6 +57,9 @@ void GameScene::Draw() {
 	/// <summary>
 	/// ここに3Dオブジェクトの描画処理を追加できる
 	/// </summary>
+	
+	//自キャラの描画
+	player_->Draw(camera_);
 	
 	// 3Dオブジェクト描画後処理
 	KamataEngine::Model::PostDraw();
