@@ -8,6 +8,7 @@ GameScene::~GameScene() {
 	delete model_; 
 	// 自キャラの解放
 	delete player_;
+	delete debugCamera_;
 }
 
 void GameScene::Initialize() { 
@@ -24,11 +25,35 @@ void GameScene::Initialize() {
 	player_ = new Player();
 	// 自キャラの初期化
 	player_->Initialize(model_, textureHandle_);
+	// デバッグカメラの生成
+	debugCamera_ = new KamataEngine::DebugCamera(720, 1280);
 }
 
 void GameScene::Update() {
 	// 自キャラの更新
 	player_->Update();
+	// カメラの処理
+	if (isDebugCameraActive_) {
+    	//デバッグカメラの更新
+    	debugCamera_->Update();
+		camera_.matView = debugCamera_->GetCamera().matView;
+		camera_.matProjection = debugCamera_->GetCamera().matProjection;
+		// ビュープロジェクション行列の転送
+		camera_.TransferMatrix();
+	} else {
+		// ビュープロジェクション行列の更新と転送
+		camera_.UpdateMatrix();
+	}
+
+
+	#ifdef _DEBUG
+	if (input_->TriggerKey(DIK_L)) {
+		if (!isDebugCameraActive_)
+			isDebugCameraActive_ = true;
+		else
+			isDebugCameraActive_ = false;
+	}
+	#endif
 }
 
 void GameScene::Draw() {

@@ -10,6 +10,7 @@
 #include "3d/WorldTransform.h"
 #include "3d/ObjectColor.h"
 #include "Player.h"
+#include "3d/DebugCamera.h"
 
 /// <summary>
 ///ゲームシーン
@@ -58,6 +59,10 @@ private:
 	KamataEngine::Camera camera_;
 	// 自キャラ
 	Player* player_ = nullptr;
+	// デバッグカメラ有効
+	bool isDebugCameraActive_ = false;
+	// デバッグカメラ
+	KamataEngine::DebugCamera* debugCamera_ = nullptr;
 };
 
 

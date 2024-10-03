@@ -3,6 +3,8 @@
 #include "3d/WorldTransform.h"
 #include "3d/Model.h"
 #include "3d/ObjectColor.h"
+#include "input/Input.h"
+#include "math/Vector3.h"
 
 /// <summary>
 /// 自キャラ
@@ -33,4 +35,6 @@ private:
 	uint32_t textureHandle_ = 0u;
 	// オブジェクトカラー
 	KamataEngine::ObjectColor objectColor_;
+	// キーボード入力
+	KamataEngine::Input* input_ = nullptr;
 };
