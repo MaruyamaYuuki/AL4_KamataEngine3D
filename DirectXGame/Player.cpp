@@ -107,7 +107,12 @@ void Player::Rotate() {
 }
 
 void Player::Attack() {
-	if (input_->PushKey(DIK_SPACE)) {
+	// タイマーを更新
+	shootTimer_ += deltaTime_;
+
+	if (input_->PushKey(DIK_SPACE) && shootTimer_ >= shootIntervel_) {
+		// タイマーをリセット
+		shootTimer_ = 0.0f;
 
 		// 自キャラの座標をコピー
 		KamataEngine::Vector3 position = worldTransform_.translation_;

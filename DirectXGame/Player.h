@@ -56,4 +56,9 @@ private:
 	KamataEngine::Input* input_ = nullptr;
 	// 弾
 	std::list<PlayerBullet*> bullets_;
+	// 弾の発射間隔
+	float shootIntervel_ = 0.5f;
+	// 発射の為のタイマー
+	float shootTimer_ = 0.0f;
+	float deltaTime_ = 1.0f / 60.0f;
 };
