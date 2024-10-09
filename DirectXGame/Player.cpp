@@ -4,6 +4,7 @@
 #include "2d/ImGuiManager.h"
 #include <algorithm>
 #include "DirectXTex.h"
+#include "math/MathUtility.h"
 
 Player::~Player() { 
 	for (PlayerBullet* bullet : bullets_) {
@@ -24,6 +25,15 @@ void Player::Initialize(KamataEngine::Model* model, uint32_t textureHandle) {
 }
 
 void Player::Update() {
+
+	// デスフラグの立った弾を削除
+	bullets_.remove_if([](PlayerBullet* bullet) {
+		if (bullet->IsDead()) {
+			delete bullet;
+			return true;
+		}
+		return false;
+	});
 
 	// キャラクター旋回処理
 	Rotate();
@@ -117,9 +127,16 @@ void Player::Attack() {
 		// 自キャラの座標をコピー
 		KamataEngine::Vector3 position = worldTransform_.translation_;
 
+		// 弾の速度
+		const float kBulletSpeed = 1.0f;
+		KamataEngine::Vector3 velocity(0, 0, kBulletSpeed);
+
+		// 速度ベクトルを自機の向きに合わせて回転させる
+		velocity = KamataEngine::MathUtility::TransformNormal(velocity, worldTransform_.matWorld_);
+
 		// 弾を生成し、初期化
 		PlayerBullet* newBullet = new PlayerBullet();
-		newBullet->Initialize(model_, position);
+		newBullet->Initialize(model_, position, velocity);
 
 		// 弾を登録する
 		bullets_.push_back(newBullet);

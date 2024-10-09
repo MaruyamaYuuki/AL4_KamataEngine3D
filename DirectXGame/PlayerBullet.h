@@ -15,7 +15,8 @@ public:
 	/// </summary>
 	/// <pram name="model">モデル</param>
 	/// <pram name="potision">初期座標</pram>
-	void Initialize(KamataEngine::Model* model, const KamataEngine::Vector3 position);
+	/// <param name="velocity">速度</param>
+	void Initialize(KamataEngine::Model* model, const KamataEngine::Vector3 position, const KamataEngine::Vector3& velocity);
 
 	/// <summary>
 	/// 更新
@@ -28,6 +29,8 @@ public:
 	/// pram name="camera">ビュープロジェクション</pram>
 	void Draw(const KamataEngine::Camera& camera);
 
+	bool IsDead() const { return isDead_; }
+
 private:
 	// ワールド変換データ
 	KamataEngine::WorldTransform worldTranform_;
@@ -37,4 +40,12 @@ private:
 	uint32_t textureHandle_ = 0u;
 	// オブジェクトカラー
 	KamataEngine::ObjectColor objectColor_;
+	// 速度
+	KamataEngine::Vector3 velocity_;
+	// 寿命<frm>
+	static const int32_t kLifeTime = 60 * 5;
+	// デスタイマー
+	int32_t deathTimer_ = kLifeTime;
+	// デスフラグ
+	bool isDead_ = false;
 };
