@@ -6,6 +6,7 @@
 #include "input/Input.h"
 #include "math/Vector3.h"
 #include "PlayerBullet.h"
+#include <list>
 
 /// <summary>
 /// 自キャラ
@@ -37,6 +38,11 @@ public:
     /// </summary>
 	void Attack();
 
+    /// <summary>
+    /// デストラクタ 
+    /// </summary>
+	~Player();
+
 private:
 	// ワールド変換データ
 	KamataEngine::WorldTransform worldTransform_;
@@ -49,5 +55,5 @@ private:
 	// キーボード入力
 	KamataEngine::Input* input_ = nullptr;
 	// 弾
-	PlayerBullet* bullet_ = nullptr;
+	std::list<PlayerBullet*> bullets_;
 };

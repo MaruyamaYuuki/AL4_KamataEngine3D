@@ -3,6 +3,13 @@
 #include <assert.h>
 #include "2d/ImGuiManager.h"
 #include <algorithm>
+#include "DirectXTex.h"
+
+Player::~Player() { 
+	for (PlayerBullet* bullet : bullets_) {
+		delete bullet;
+	}
+}
 
 void Player::Initialize(KamataEngine::Model* model, uint32_t textureHandle) {
 	//NULLポインタチェック
@@ -68,8 +75,8 @@ void Player::Update() {
 	Attack();
 
 	// 弾更新
-	if (bullet_) {
-		bullet_->Update();
+	for (PlayerBullet* bullet : bullets_) {
+		bullet->Update();
 	}
 
 	worldTransform_.UpdateMatrix();
@@ -82,8 +89,8 @@ void Player::Draw(KamataEngine::Camera& camera) {
 	model_->Draw(worldTransform_, camera, textureHandle_, &objectColor_);
 
 	// 弾描画
-	if (bullet_) {
-		bullet_->Draw(camera);
+	for (PlayerBullet* bullet : bullets_) {
+		bullet->Draw(camera);
 	}
 }
 
@@ -102,11 +109,14 @@ void Player::Rotate() {
 void Player::Attack() {
 	if (input_->PushKey(DIK_SPACE)) {
 
+		// 自キャラの座標をコピー
+		KamataEngine::Vector3 position = worldTransform_.translation_;
+
 		// 弾を生成し、初期化
 		PlayerBullet* newBullet = new PlayerBullet();
-		newBullet->Initialize(model_, worldTransform_.translation_);
+		newBullet->Initialize(model_, position);
 
 		// 弾を登録する
-		bullet_ = newBullet;
+		bullets_.push_back(newBullet);
 	}
 }
