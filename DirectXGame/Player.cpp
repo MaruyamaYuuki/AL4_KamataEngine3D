@@ -58,6 +58,8 @@ void Player::Update() {
 	ImGui::DragFloat3("Player", &worldTransform_.translation_.x,1.0f);
 	ImGui::End();
 #endif
+
+	Rotate();
 	worldTransform_.UpdateMatrix();
 
 
@@ -66,4 +68,16 @@ void Player::Update() {
 void Player::Draw(KamataEngine::Camera& camera) {
 	// 3Dモデルを描画
 	model_->Draw(worldTransform_, camera, textureHandle_, &objectColor_);
+}
+
+void Player::Rotate() {
+	/// 回転速さ[ラジアン/frame]
+	const float kRotSpeed = 0.02f;
+
+	// 押した方向で移動ベクトルを変更
+	if (input_->PushKey(DIK_A)) {
+		worldTransform_.rotation_.y -= kRotSpeed;
+	} else if (input_->PushKey(DIK_D)) {
+		worldTransform_.rotation_.y += kRotSpeed;
+	}
 }

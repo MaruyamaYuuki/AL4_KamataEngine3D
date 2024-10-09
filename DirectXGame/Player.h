@@ -26,6 +26,11 @@ public:
 	/// </summary>
 	void Draw(KamataEngine::Camera& camera);
 
+    /// <summary>
+    /// 旋回
+    /// </summary>
+	void Rotate();
+
 private:
 	// ワールド変換データ
 	KamataEngine::WorldTransform worldTransform_;
