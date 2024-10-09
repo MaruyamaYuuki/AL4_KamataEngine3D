@@ -11,12 +11,20 @@
       "RelativeMoniker": "D:0:0:{21B76583-DB5E-4750-B00C-FBCF46ABCE48}|DirectXGame.vcxproj|solutionrelative:Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21B76583-DB5E-4750-B00C-FBCF46ABCE48}|DirectXGame.vcxproj|C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\GameScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{21B76583-DB5E-4750-B00C-FBCF46ABCE48}|DirectXGame.vcxproj|solutionrelative:GameScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{21B76583-DB5E-4750-B00C-FBCF46ABCE48}|DirectXGame.vcxproj|C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\PlayerBullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21B76583-DB5E-4750-B00C-FBCF46ABCE48}|DirectXGame.vcxproj|solutionrelative:PlayerBullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21B76583-DB5E-4750-B00C-FBCF46ABCE48}|DirectXGame.vcxproj|C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\PlayerBullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21B76583-DB5E-4750-B00C-FBCF46ABCE48}|DirectXGame.vcxproj|solutionrelative:PlayerBullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21B76583-DB5E-4750-B00C-FBCF46ABCE48}|DirectXGame.vcxproj|C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\GameScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{21B76583-DB5E-4750-B00C-FBCF46ABCE48}|DirectXGame.vcxproj|solutionrelative:GameScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21B76583-DB5E-4750-B00C-FBCF46ABCE48}|DirectXGame.vcxproj|C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\GameScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21B76583-DB5E-4750-B00C-FBCF46ABCE48}|DirectXGame.vcxproj|solutionrelative:GameScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21B76583-DB5E-4750-B00C-FBCF46ABCE48}|DirectXGame.vcxproj|C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,13 +58,39 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlayerBullet.h",
+              "DocumentMoniker": "C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\PlayerBullet.h",
+              "RelativeDocumentMoniker": "PlayerBullet.h",
+              "ToolTip": "C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\PlayerBullet.h*",
+              "RelativeToolTip": "PlayerBullet.h*",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-09T05:17:35.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerBullet.cpp",
+              "DocumentMoniker": "C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\PlayerBullet.cpp",
+              "RelativeDocumentMoniker": "PlayerBullet.cpp",
+              "ToolTip": "C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\PlayerBullet.cpp*",
+              "RelativeToolTip": "PlayerBullet.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-09T05:17:33.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Player.h",
               "DocumentMoniker": "C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\Player.h",
               "RelativeDocumentMoniker": "Player.h",
-              "ToolTip": "C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\Player.h",
-              "RelativeToolTip": "Player.h",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAAAPAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\Player.h*",
+              "RelativeToolTip": "Player.h*",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-03T07:39:52.998Z",
               "EditorCaption": ""
@@ -69,26 +103,27 @@
               "RelativeDocumentMoniker": "Player.cpp",
               "ToolTip": "C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\Player.cpp*",
               "RelativeToolTip": "Player.cpp*",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAD0AAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFUAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-03T07:39:26.917Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GameScene.h",
               "DocumentMoniker": "C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\GameScene.h",
               "RelativeDocumentMoniker": "GameScene.h",
               "ToolTip": "C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\GameScene.h",
               "RelativeToolTip": "GameScene.h",
-              "ViewState": "AgIAACcAAAAAAAAAAAAkwD0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-03T06:00:16.684Z"
+              "WhenOpened": "2024-10-03T06:00:16.684Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "GameScene.cpp",
               "DocumentMoniker": "C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\GameScene.cpp",
               "RelativeDocumentMoniker": "GameScene.cpp",
@@ -101,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\diovs\\Documents\\VS2022_Project\\2\u5E74\\AL4\\AL4_KamataEngine3D\\DirectXGame\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",

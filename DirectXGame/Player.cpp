@@ -17,6 +17,11 @@ void Player::Initialize(KamataEngine::Model* model, uint32_t textureHandle) {
 }
 
 void Player::Update() {
+
+	// キャラクター旋回処理
+	Rotate();
+
+	// キャラクター移動処理
 	// キャラクターの移動ベクトル
 	KamataEngine::Vector3 move = {0, 0, 0};
 
@@ -59,7 +64,14 @@ void Player::Update() {
 	ImGui::End();
 #endif
 
-	Rotate();
+	// キャラクター攻撃処理
+	Attack();
+
+	// 弾更新
+	if (bullet_) {
+		bullet_->Update();
+	}
+
 	worldTransform_.UpdateMatrix();
 
 
@@ -68,6 +80,11 @@ void Player::Update() {
 void Player::Draw(KamataEngine::Camera& camera) {
 	// 3Dモデルを描画
 	model_->Draw(worldTransform_, camera, textureHandle_, &objectColor_);
+
+	// 弾描画
+	if (bullet_) {
+		bullet_->Draw(camera);
+	}
 }
 
 void Player::Rotate() {
@@ -79,5 +96,17 @@ void Player::Rotate() {
 		worldTransform_.rotation_.y -= kRotSpeed;
 	} else if (input_->PushKey(DIK_D)) {
 		worldTransform_.rotation_.y += kRotSpeed;
+	}
+}
+
+void Player::Attack() {
+	if (input_->PushKey(DIK_SPACE)) {
+
+		// 弾を生成し、初期化
+		PlayerBullet* newBullet = new PlayerBullet();
+		newBullet->Initialize(model_, worldTransform_.translation_);
+
+		// 弾を登録する
+		bullet_ = newBullet;
 	}
 }

@@ -5,6 +5,7 @@
 #include "3d/ObjectColor.h"
 #include "input/Input.h"
 #include "math/Vector3.h"
+#include "PlayerBullet.h"
 
 /// <summary>
 /// 自キャラ
@@ -31,6 +32,11 @@ public:
     /// </summary>
 	void Rotate();
 
+    /// <summary>
+    /// 攻撃
+    /// </summary>
+	void Attack();
+
 private:
 	// ワールド変換データ
 	KamataEngine::WorldTransform worldTransform_;
@@ -42,4 +48,6 @@ private:
 	KamataEngine::ObjectColor objectColor_;
 	// キーボード入力
 	KamataEngine::Input* input_ = nullptr;
+	// 弾
+	PlayerBullet* bullet_ = nullptr;
 };
