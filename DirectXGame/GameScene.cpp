@@ -1,6 +1,7 @@
 #include "GameScene.h"
 #include "base/TextureManager.h"
 #include <cassert>
+#include "3d/AxisIndicator.h"
 
 GameScene::GameScene() {}
 
@@ -27,6 +28,10 @@ void GameScene::Initialize() {
 	player_->Initialize(model_, textureHandle_);
 	// デバッグカメラの生成
 	debugCamera_ = new KamataEngine::DebugCamera(720, 1280);
+	// 軸方向表示の表示を有効にする
+	KamataEngine::AxisIndicator::GetInstance()->SetVisible(true);
+	// 軸方向表示が参照するビュープロジェクションをしていする
+	KamataEngine::AxisIndicator::GetInstance()->SetTargetCamera(&camera_);
 }
 
 void GameScene::Update() {

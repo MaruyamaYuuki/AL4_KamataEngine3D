@@ -45,12 +45,13 @@ void Player::Update() {
 	// 移動限界座標
 	const float kMoveLimitX = 34.0f;
 	const float kMoveLimitY = 18.0f;
+	const float kMoveLimitY2 = 0.0f;
 
 	// 範囲を超えない処理
 	worldTransform_.translation_.x = std::max(worldTransform_.translation_.x, -kMoveLimitX);
 	worldTransform_.translation_.x = std::min(worldTransform_.translation_.x, +kMoveLimitX);
 	worldTransform_.translation_.y = std::max(worldTransform_.translation_.y, -kMoveLimitY);
-	worldTransform_.translation_.y = std::min(worldTransform_.translation_.y, +kMoveLimitY);
+	worldTransform_.translation_.y = std::min(worldTransform_.translation_.y, +kMoveLimitY2);
 
 
 #ifdef _DEBUG
